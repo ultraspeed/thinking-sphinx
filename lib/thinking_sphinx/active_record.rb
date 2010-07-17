@@ -183,7 +183,7 @@ module ThinkingSphinx
       
       def insert_sphinx_index(index)
         self.sphinx_indexes << index
-        subclasses.each { |klass| klass.insert_sphinx_index(index) }
+        descendants.each { |klass| klass.insert_sphinx_index(index) }
       end
       
       def has_sphinx_indexes?
